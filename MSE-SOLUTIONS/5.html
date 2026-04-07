@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head><title>Registration Form Validation</title>
+    <style>
+        body { font-family: sans-serif; padding: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: inline-block; width: 130px; }
+    </style>
+</head>
+<body>
+
+    <h2>Registration Form</h2>
+    <form onsubmit="return validateForm()">
+        <div class="form-group">
+            <label>Name:</label>
+            <input type="text" id="name"> </div>
+        <div class="form-group">
+            <label>Age:</label>
+            <input type="text" id="age"> </div>
+        <div class="form-group">
+            <label>Password:</label>
+            <input type="password" id="pass"> </div>
+        <div class="form-group">
+            <label>Confirm Password:</label>
+            <input type="password" id="confirm"> </div>
+        <button type="submit">Register</button>
+    </form>
+
+
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value;
+            let age = document.getElementById("age").value;
+            let pass = document.getElementById("pass").value;
+            let confirm = document.getElementById("confirm").value;
+
+            if (name.trim() == "") {
+                alert("Name cannot be empty");
+                return false;
+            }
+
+           if (age == "" || isNaN(age)) {
+                alert("Please enter a valid number for Age");
+                return false;
+            }
+
+            if (pass == "") {
+                alert("Password cannot be empty");
+                return false;
+            }
+            if (pass !== confirm) {
+                alert("Passwords do not match");
+                return false;
+            }
+
+            alert("Registration Successful!");
+            return true;
+        }
+    </script>
+
+</body>
+</html>

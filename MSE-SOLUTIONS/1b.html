@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CGPA to Percentage</title>
+</head>
+<body>
+
+    <h2>CGPA to Percentage Converter</h2>
+    
+    <button onclick="calculatePercentage()">Convert CGPA</button>
+
+    <script>
+        function calculatePercentage() {
+            
+            let cgpa = prompt("Please enter your CGPA:");
+     
+            let cgpaValue = parseFloat(cgpa);
+
+            let percentage = cgpaValue * 9.5;
+
+            if (!isNaN(percentage)) {
+                alert("The percentage equivalence is: " + percentage + "%");
+            } else {
+                alert("Invalid input. Please enter a number.");
+            }
+        }
+    </script>
+
+</body>
+</html>

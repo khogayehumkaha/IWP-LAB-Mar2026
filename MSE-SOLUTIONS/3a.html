@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head> <title>My Favourite Movie</title>
+    <style>
+        
+        body {
+            background-image: url('bg.jpg');
+            background-size: cover;
+            font-family: Arial, sans-serif;
+        }
+
+        a:link { color: yellow; }            
+        a:visited { color: blue; } 
+        a:hover { color: red; }    
+        a:active { color: white; }   
+
+        .movie-poster {
+            width: 300px;
+            transition: filter 0.5s;
+            filter: grayscale(100%); 
+            border: 5px solid white;
+        }
+
+        .movie-poster:hover {
+            filter: grayscale(0%);
+        }
+    </style>
+</head>
+<body>
+
+    <h1>My Favourite Movie</h1> 
+
+    <p>Check out more info on this movie: 
+        <a href="https://lms.nmamit.in" target="_blank">Visit IMDb</a> 
+    </p>
+
+    <h3>Movie Poster (Hover to see color)</h3>
+    <img src="dhurandhar.jpg"  alt="Favourite Movie"   class="movie-poster"> 
+
+</body>
+</html>

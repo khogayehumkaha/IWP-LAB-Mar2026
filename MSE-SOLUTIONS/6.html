@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head> <title>Simple Calculator</title></head>
+<body>
+
+    <h2>Basic Calculator</h2>
+
+    <input type="number" id="n1" placeholder="Number 1">
+    <input type="number" id="n2" placeholder="Number 2">
+    <br><br>
+
+    <button onclick="calc('sum')">Sum</button>
+    <button onclick="calc('diff')">Difference</button>
+    <button onclick="calc('prod')">Product</button>
+    <button onclick="calc('quot')">Quotient</button>
+
+    <h3 id="res">Result: </h3>
+
+    <script>
+        function calc(op) {
+            var a = parseFloat(document.getElementById("n1").value);
+            var b = parseFloat(document.getElementById("n2").value);
+            var r = 0;
+
+            if (isNaN(a) || isNaN(b)) {
+                alert("Please enter both numbers");
+                return;
+            }
+
+            if (op == 'sum') r = a + b;
+            if (op == 'diff') r = a - b;
+            if (op == 'prod') r = a * b;
+            if (op == 'quot') r = (b !== 0) ? a / b : "Cannot divide by zero";
+
+            document.getElementById("res").innerHTML = "Result: " + r;
+        }
+    </script>
+
+</body>
+</html>
